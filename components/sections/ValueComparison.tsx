@@ -1,8 +1,8 @@
 
-export default function ValueComparision = {
+export default function ValueComparision() {
   return (
     <div>
-      
+
     </div>
   );
 };

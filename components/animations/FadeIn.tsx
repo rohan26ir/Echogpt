@@ -1,8 +1,8 @@
 
-export default function FadeIn = {
+export default function FadeIn() {
   return (
     <div>
-      
+
     </div>
   );
 };

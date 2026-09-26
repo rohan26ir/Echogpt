@@ -1,8 +1,8 @@
 
-export default function PricingPlans = {
+export default function PricingPlans() {
   return (
     <div>
-      
+
     </div>
   );
 };

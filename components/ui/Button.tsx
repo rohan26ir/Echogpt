@@ -1,8 +1,8 @@
 
-export default function Button = {
+export default function Button() {
   return (
     <div>
-      
+
     </div>
   );
 };

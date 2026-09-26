@@ -1,8 +1,8 @@
 
-export default function Testimonials = {
+export default function Testimonials() {
   return (
     <div>
-      
+
     </div>
   );
 };

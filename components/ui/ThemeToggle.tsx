@@ -1,8 +1,8 @@
 
-export default function ThemeToggle = {
+export default function ThemeToggle() {
   return (
     <div>
-      
+
     </div>
   );
 };

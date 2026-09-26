@@ -1,8 +1,8 @@
 
-export default function CtaBanner = {
+export default function CtaBanner() {
   return (
     <div>
-      
+
     </div>
   );
 };

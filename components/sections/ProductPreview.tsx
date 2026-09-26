@@ -1,8 +1,8 @@
 
-export default function ProductPreview = {
+export default function ProductPreview() {
   return (
     <div>
-      
+
     </div>
   );
 };

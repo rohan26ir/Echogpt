@@ -1,5 +1,6 @@
 import Navbar from "@/components/layout/Navbar";
 import HeroSection from "@/components/sections/HeroSection";
+import FeaturesGrid from "@/components/sections/FeaturesGrid";
 
 export default function Home() {
   return (
@@ -7,8 +8,9 @@ export default function Home() {
       {/* Navbar */}
       <Navbar logoText="EchoGPT.ai" />
 
-      {/* Hero Section */}
+      {/* Main Content */}
       <main className="flex-1 w-full">
+        {/* Hero Section */}
         <HeroSection
           brandName="EchoGpt.ai"
           headlineLine1="EchoGPT Next"
@@ -16,6 +18,10 @@ export default function Home() {
           directorName="Talk with David"
           directorRole="DIRECTOR OF ECHOGPT"
         />
+
+        {/* Features Grid Section */}
+        <FeaturesGrid />
+
       </main>
     </div>
   );

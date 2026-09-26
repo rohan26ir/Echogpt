@@ -1,8 +1,8 @@
 
-export default function FAQSection = {
+export default function FAQSection() {
   return (
     <div>
-      
+
     </div>
   );
 };

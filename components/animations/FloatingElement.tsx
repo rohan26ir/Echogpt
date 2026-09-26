@@ -1,8 +1,8 @@
 
-export default function FloatingElement = {
+export default function FloatingElement() {
   return (
     <div>
-      
+
     </div>
   );
 };

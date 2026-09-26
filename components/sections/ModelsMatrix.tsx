@@ -1,8 +1,7 @@
-
-export default function ModelsMatrix = {
+export default function ModelsMatrix() {
   return (
     <div>
-      
+
     </div>
   );
-};
+}
