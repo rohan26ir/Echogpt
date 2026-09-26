@@ -1,6 +1,7 @@
 import Navbar from "@/components/layout/Navbar";
 import HeroSection from "@/components/sections/HeroSection";
 import FeaturesGrid from "@/components/sections/FeaturesGrid";
+import ModelsMatrix from "@/components/sections/ModelsMatrix";
 
 export default function Home() {
   return (
@@ -22,6 +23,8 @@ export default function Home() {
         {/* Features Grid Section */}
         <FeaturesGrid />
 
+        {/* AI Models Matrix Section */}
+        <ModelsMatrix />
       </main>
     </div>
   );
