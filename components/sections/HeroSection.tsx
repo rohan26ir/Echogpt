@@ -2,8 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
+import Badge from "@/components/ui/Badge";
+import Button from "@/components/ui/Button";
 
 interface HeroSectionProps {
   brandName?: string;
@@ -95,8 +97,12 @@ export default function HeroSection({
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="max-w-xl "
+          className="max-w-xl space-y-3"
         >
+          <Badge icon={<Sparkles className="w-3.5 h-3.5" />}>
+            ECHO AI V2.0 LIVE
+          </Badge>
+
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.05] filter drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]">
             {headlineLine1} <br />
             <span className="text-white">{headlineLine2}</span>
@@ -134,13 +140,14 @@ export default function HeroSection({
               </div>
 
               {/* Book Call Pill Button */}
-              <Link
+              <Button
                 href="#book-call"
-                className="inline-flex items-center justify-center gap-1.5 px-3 py-1 rounded-lg text-xs font-semibold text-black bg-black/10 hover:bg-zinc-200 transition-colors shadow-md group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-orange-100"
+                variant="pill"
+                size="sm"
+                rightIcon={<ArrowUpRight className="w-3.5 h-3.5 text-red-600 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />}
               >
-                <span>Book 15-mins Call</span>
-                <ArrowUpRight className="w-3.5 h-3.5 text-red-600 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </Link>
+                Book 15-mins Call
+              </Button>
             </div>
           </div>
         </motion.div>

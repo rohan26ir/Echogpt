@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
+import Badge from "@/components/ui/Badge";
 import {
   Cpu,
   Sparkles,
@@ -113,10 +114,9 @@ export default function FeaturesGrid() {
           transition={{ duration: 0.8 }}
           className="text-center max-w-3xl mx-auto space-y-4 mb-16 sm:mb-20"
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-orange-400 text-xs font-semibold tracking-wider uppercase backdrop-blur-md">
-            <Zap className="w-3.5 h-3.5" />
-            <span>Next-Gen Capabilities</span>
-          </div>
+          <Badge icon={<Zap className="w-3.5 h-3.5" />}>
+            Next-Gen Capabilities
+          </Badge>
 
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white leading-tight">
             Empowering Your Workflow With <br />
@@ -151,9 +151,9 @@ export default function FeaturesGrid() {
               <div>
                 {/* Top Badge & Icon */}
                 <div className="flex items-center justify-between mb-6">
-                  <span className="text-[10px] font-bold text-orange-400 tracking-widest uppercase bg-orange-500/10 border border-orange-500/20 px-3 py-1 rounded-full">
+                  <Badge variant="orange" size="sm">
                     {feature.badge}
-                  </span>
+                  </Badge>
                   <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 group-hover:border-orange-500/40 transition-colors">
                     {feature.icon}
                   </div>

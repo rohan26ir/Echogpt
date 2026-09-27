@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import Badge from "@/components/ui/Badge";
 import { 
   Sparkles, 
   Cpu, 
@@ -132,10 +133,9 @@ export default function ModelsMatrix() {
           transition={{ duration: 0.8 }}
           className="text-center max-w-3xl mx-auto space-y-4 mb-14"
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-orange-400 text-xs font-bold tracking-widest uppercase backdrop-blur-md">
-            <Cpu className="w-3.5 h-3.5" />
-            <span>AI Engine Matrix</span>
-          </div>
+          <Badge icon={<Cpu className="w-3.5 h-3.5" />}>
+            AI Engine Matrix
+          </Badge>
 
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
             Powered By World-Class <br />
@@ -223,9 +223,9 @@ export default function ModelsMatrix() {
                         />
                       </div>
 
-                      <span className="text-[10px] font-bold text-orange-400 tracking-wider uppercase bg-black/80 border border-orange-500/30 px-3 py-1 rounded-full">
+                      <Badge variant="orange" size="sm">
                         {model.categoryBadge}
-                      </span>
+                      </Badge>
                     </div>
 
                     {/* Bottom Benchmark Metrics Bar */}
