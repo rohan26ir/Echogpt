@@ -4,6 +4,7 @@ import FeaturesGrid from "@/components/sections/FeaturesGrid";
 import ModelsMatrix from "@/components/sections/ModelsMatrix";
 import ValueComparison from "@/components/sections/ValueComparison";
 import Testimonials from "@/components/sections/Testimonials";
+import PricingPlans from "@/components/sections/PricingPlans";
 import FAQSection from "@/components/sections/FAQSection";
 import CtaBanner from "@/components/sections/CtaBanner";
 
@@ -38,6 +39,9 @@ export default function Home() {
 
         {/* Testimonials Section */}
         <Testimonials />
+
+        {/* Pricing Plans Section */}
+        <PricingPlans />
 
         {/* FAQ Section */}
         <FAQSection />

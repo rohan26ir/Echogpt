@@ -107,3 +107,12 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(124, 58, 237, 0.4);
 }
+
+/* Hide nl-wrap watermark / badge elements */
+.nl-wrap,
+[class*="nl-wrap"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
