@@ -53,7 +53,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section id="faq" className="relative w-full bg-[#030304] text-white py-24 sm:py-32 px-4 sm:px-6 lg:px-12 overflow-hidden select-none">
+    <section id="faq" className="relative w-full bg-[#030304] text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-12 overflow-hidden select-none">
       {/* Subtle Background Glow */}
       <div className="absolute top-1/3 left-10 w-[600px] h-[600px] bg-red-600/10 rounded-full blur-[150px] pointer-events-none z-0" />
       <div 

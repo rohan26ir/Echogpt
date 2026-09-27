@@ -7,7 +7,7 @@ import Badge from "@/components/ui/Badge";
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="relative w-full bg-[#030304] text-white py-24 sm:py-32 px-4 sm:px-6 lg:px-12 overflow-hidden select-none">
+    <section id="testimonials" className="relative w-full bg-[#030304] text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-12 overflow-hidden select-none">
       {/* Background Ambient Glow */}
       <div className="absolute top-1/3 right-0 w-[600px] h-[600px] bg-gradient-to-l from-orange-600/15 via-red-600/10 to-transparent rounded-full blur-[150px] pointer-events-none z-0" />
 

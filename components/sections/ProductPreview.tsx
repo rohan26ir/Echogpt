@@ -65,7 +65,7 @@ export default function ProductPreview() {
     projects.find((p) => p.id === activeId) || projects[0];
 
   return (
-    <section id="projects" className="relative w-full bg-[#030304] text-white py-24 sm:py-32 px-4 sm:px-6 lg:px-12 overflow-hidden select-none">
+    <section id="projects" className="relative w-full bg-[#030304] text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-12 overflow-hidden select-none">
       {/* Background Lighting Glow */}
       <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-red-600/10 rounded-full blur-[140px] pointer-events-none z-0" />
 
@@ -104,57 +104,8 @@ export default function ProductPreview() {
         {/* 2-Column Main Showcase Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           
-          {/* Left Column: Interactive Accordion List */}
-          <div className="lg:col-span-5 space-y-6">
-            {projects.map((project) => {
-              const isActive = project.id === activeId;
-              return (
-                <div
-                  key={project.id}
-                  onClick={() => setActiveId(project.id)}
-                  className="group cursor-pointer border-b border-white/10 pb-6 transition-all duration-300"
-                >
-                  <div
-                    className={`pl-4 transition-all duration-300 ${
-                      isActive
-                        ? "border-l-2 border-l-red-500"
-                        : "border-l-2 border-l-transparent hover:border-l-zinc-500"
-                    }`}
-                  >
-                    <h3
-                      className={`text-3xl sm:text-4xl lg:text-[40px] font-bold tracking-tight leading-tight transition-colors duration-300 ${
-                        isActive
-                          ? "text-white"
-                          : "text-zinc-400 group-hover:text-white"
-                      }`}
-                    >
-                      {project.title}
-                    </h3>
-
-                    {/* Smooth Expandable Description */}
-                    <AnimatePresence initial={false}>
-                      {isActive && (
-                        <motion.div
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: "auto" }}
-                          exit={{ opacity: 0, height: 0 }}
-                          transition={{ duration: 0.35, ease: "easeInOut" }}
-                          className="overflow-hidden"
-                        >
-                          <p className="pt-3 text-sm sm:text-base text-zinc-400 font-normal leading-relaxed">
-                            {project.description}
-                          </p>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* Right Column: Dynamic Project Showcase Card */}
-          <div className="lg:col-span-7">
+          {/* Right Column: Dynamic Project Showcase Card (First on Mobile) */}
+          <div className="order-1 lg:order-2 lg:col-span-7">
             <div className="relative rounded-3xl overflow-hidden border border-white/15 bg-zinc-950 shadow-2xl h-[380px] sm:h-[460px] lg:h-[500px] group">
               <AnimatePresence mode="wait">
                 <motion.div
@@ -212,6 +163,55 @@ export default function ProductPreview() {
                 </motion.div>
               </AnimatePresence>
             </div>
+          </div>
+
+          {/* Left Column: Interactive Accordion List (Second on Mobile) */}
+          <div className="order-2 lg:order-1 lg:col-span-5 space-y-6">
+            {projects.map((project) => {
+              const isActive = project.id === activeId;
+              return (
+                <div
+                  key={project.id}
+                  onClick={() => setActiveId(project.id)}
+                  className="group cursor-pointer border-b border-white/10 pb-6 transition-all duration-300"
+                >
+                  <div
+                    className={`pl-4 transition-all duration-300 ${
+                      isActive
+                        ? "border-l-2 border-l-red-500"
+                        : "border-l-2 border-l-transparent hover:border-l-zinc-500"
+                    }`}
+                  >
+                    <h3
+                      className={`text-3xl sm:text-4xl lg:text-[40px] font-bold tracking-tight leading-tight transition-colors duration-300 ${
+                        isActive
+                          ? "text-white"
+                          : "text-zinc-400 group-hover:text-white"
+                      }`}
+                    >
+                      {project.title}
+                    </h3>
+
+                    {/* Smooth Expandable Description */}
+                    <AnimatePresence initial={false}>
+                      {isActive && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: "auto" }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.35, ease: "easeInOut" }}
+                          className="overflow-hidden"
+                        >
+                          <p className="pt-3 text-sm sm:text-base text-zinc-400 font-normal leading-relaxed">
+                            {project.description}
+                          </p>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                </div>
+              );
+            })}
           </div>
 
         </div>

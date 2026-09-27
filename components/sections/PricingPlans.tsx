@@ -82,7 +82,7 @@ export default function PricingPlans() {
   const [activePlanId, setActivePlanId] = useState<string>("pro");
 
   return (
-    <section className="w-full py-16 md:py-24 bg-[#050507] text-white flex flex-col items-center justify-center relative overflow-hidden font-sans">
+    <section className="w-full py-12 md:py-16 bg-[#050507] text-white flex flex-col items-center justify-center relative overflow-hidden font-sans">
       {/* Background Subtle Grid / Glow */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none" />
 

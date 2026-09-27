@@ -8,7 +8,7 @@ import Button from "@/components/ui/Button";
 
 export default function CtaBanner() {
   return (
-    <section id="cta" className="relative w-full bg-[#030304] text-white py-28 sm:py-36 px-4 sm:px-6 lg:px-12 overflow-hidden select-none">
+    <section id="cta" className="relative w-full bg-[#030304] text-white py-16 sm:py-24 px-4 sm:px-6 lg:px-12 overflow-hidden select-none">
       {/* Top Curved Image Shape Overlay */}
       <div className="absolute top-0 left-0 right-0 w-full h-20 sm:h-32 pointer-events-none z-20">
         <Image

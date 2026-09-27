@@ -93,7 +93,7 @@ export default function FeaturesGrid() {
   ];
 
   return (
-    <section id="features" className="relative w-full bg-[#030304] text-white py-24 sm:py-32 px-4 sm:px-6 lg:px-12 overflow-hidden select-none">
+    <section id="features" className="relative w-full bg-[#030304] text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-12 overflow-hidden select-none">
       {/* Background Ambient Glow & Grid Lines */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-tr from-orange-600/15 via-red-600/10 to-transparent rounded-full blur-[140px] pointer-events-none z-0" />
       <div

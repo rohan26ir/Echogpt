@@ -90,7 +90,7 @@ export default function HeroSection({
       </div>
 
       {/* 4. Bottom Hero Overlay: Headline (Left) & Director Floating Card (Right) */}
-      <div className="relative z-20 w-full max-w-7xl mx-auto flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 mt-auto bottom-55 md:bottom-70 2xl:bottom-20 ">
+      <div className="relative z-20 w-full max-w-7xl mx-auto flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 mt-auto bottom-70 md:bottom-80 2xl:bottom-28 ">
 
         {/* Bottom Left Main Headline */}
         <motion.div

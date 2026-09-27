@@ -1,15 +1,10 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import Badge from "@/components/ui/Badge";
 import { 
-  Sparkles, 
   Cpu, 
-  Mic, 
-  Eye, 
-  Zap, 
   CheckCircle2, 
   ArrowUpRight 
 } from "lucide-react";
@@ -33,8 +28,6 @@ interface ModelItem {
 }
 
 export default function ModelsMatrix() {
-  const [activeCategory, setActiveCategory] = useState<"all" | "llm" | "voice" | "vision">("all");
-
   const models: ModelItem[] = [
     {
       id: "chatgpt-4o",
@@ -106,13 +99,8 @@ export default function ModelsMatrix() {
     },
   ];
 
-  const filteredModels =
-    activeCategory === "all"
-      ? models
-      : models.filter((m) => m.category === activeCategory);
-
   return (
-    <section id="models" className="relative w-full bg-[#030304] text-white py-24 sm:py-32 px-4 sm:px-6 lg:px-12 select-none">
+    <section id="models" className="relative w-full bg-[#030304] text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-12 select-none">
       {/* Background Noise & Lighting Glow */}
       <div className="absolute top-1/4 right-10 w-[600px] h-[600px] bg-gradient-to-br from-orange-600/15 via-red-600/10 to-transparent rounded-full blur-[140px] pointer-events-none z-0" />
       <div 
@@ -131,7 +119,7 @@ export default function ModelsMatrix() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="text-center max-w-3xl mx-auto space-y-4 mb-14"
+          className="text-center max-w-3xl mx-auto space-y-4 mb-16"
         >
           <Badge icon={<Cpu className="w-3.5 h-3.5" />}>
             AI Engine Matrix
@@ -149,35 +137,10 @@ export default function ModelsMatrix() {
           </p>
         </motion.div>
 
-        {/* Category Filter Tabs */}
-        <div className="flex justify-center mb-16">
-          <div className="inline-flex p-1.5 rounded-2xl bg-zinc-950/80 border border-white/10 backdrop-blur-xl gap-2">
-            {[
-              { id: "all", label: "All Models", icon: <Sparkles className="w-3.5 h-3.5" /> },
-              { id: "llm", label: "Language LLMs", icon: <Cpu className="w-3.5 h-3.5" /> },
-              { id: "voice", label: "Voice & Speech", icon: <Mic className="w-3.5 h-3.5" /> },
-              { id: "vision", label: "Vision & Media", icon: <Eye className="w-3.5 h-3.5" /> },
-            ].map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveCategory(tab.id as any)}
-                className={`relative px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 flex items-center gap-2 ${
-                  activeCategory === tab.id
-                    ? "text-white bg-gradient-to-r from-orange-600 to-red-600 shadow-lg shadow-orange-600/30"
-                    : "text-zinc-400 hover:text-white hover:bg-white/5"
-                }`}
-              >
-                {tab.icon}
-                <span>{tab.label}</span>
-              </button>
-            ))}
-          </div>
-        </div>
-
         {/* 1-by-1 Sticky Stack Cards Container */}
         <div className="relative flex flex-col gap-12 sm:gap-16 pb-24">
           <AnimatePresence mode="popLayout">
-            {filteredModels.map((model, idx) => (
+            {models.map((model, idx) => (
               <motion.div
                 key={model.id}
                 layout

@@ -77,23 +77,23 @@ export default function Navbar({ logoText = "EchoGPT.ai" }: NavbarProps) {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-black/95 backdrop-blur-xl border-b border-white/10 px-4 pt-4 pb-6 space-y-4"
+            className="md:hidden bg-black/95 backdrop-blur-xl border-b border-white/10 px-4 pt-6 pb-8 flex flex-col items-center justify-center text-center space-y-4"
           >
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="block text-base font-medium text-zinc-300 hover:text-white py-2"
+                className="w-full block text-base font-medium text-zinc-300 hover:text-white py-2 text-center transition-colors"
               >
                 {link.name}
               </Link>
             ))}
-            <div className="pt-2">
+            <div className="pt-2 w-full flex justify-center">
               <Link
                 href="#contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-500 hover:to-red-500 transition-all shadow-lg shadow-orange-600/30"
+                className="w-full max-w-xs inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-500 hover:to-red-500 transition-all shadow-lg shadow-orange-600/30"
               >
                 <span>Contact Us</span>
                 <ArrowUpRight className="w-4 h-4" />
