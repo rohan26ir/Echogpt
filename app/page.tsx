@@ -22,14 +22,16 @@ export default function Home() {
           directorRole="DIRECTOR OF ECHOGPT"
         />
 
-        {/* 3D Tilted Dashboard Product Preview */}
-        <ProductPreview />
+
 
         {/* Features Grid Section */}
         <FeaturesGrid />
 
         {/* AI Models Matrix Section */}
         <ModelsMatrix />
+
+        {/* Tilted Dashboard Product Preview */}
+        <ProductPreview />
 
         {/* Why Choose EchoGPT / Value Comparison Section */}
         <ValueComparison />
